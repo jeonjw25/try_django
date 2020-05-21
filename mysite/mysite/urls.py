@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('news/', include('news.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
+# include()는 다른 urlconfig를 참조할 수있게 해줌
+# parsing된 url중에서 news, polls, admin을 잡아내서 우리가 만든 url파일로 연결을 시켜준다.
