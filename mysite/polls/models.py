@@ -4,10 +4,10 @@ import datetime
 
 
 class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published') 
+    question_text = models.CharField(max_length=200) #질문내용
+    pub_date = models.DateTimeField('date published') #질문날짜
     def __str__(self):
-        return self.question_text
+        return self.question_text #shell 에서 출력시 내용을 출력가능하게함.
     
     def was_published_recently(self):
         now = timezone.now()
